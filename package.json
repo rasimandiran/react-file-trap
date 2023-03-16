@@ -1,0 +1,43 @@
+{
+  "name": "react-file-trap",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Simple wrapper component that convert child component to a drag and drop file input",
+  "author": "Rasim Andiran <rasimandiran@gmail.com>",
+  "main": "./build/index.js",
+  "homepage": "https://github.com/rasimandiran/react-file-trap#readme",
+  "repository": {
+    "url": "https://github.com/rasimandiran/react-file-trap.git"
+  },
+  "keywords": [
+    "react",
+    "react-drag-drop",
+    "react-drag-drop-upload",
+    "react-file-upload",
+    "react-file-input",
+    "react-browse-files",
+    "react-drag-drop-files",
+    "drag-and-drop",
+    "browse-files",
+    "file-upload",
+    "file-input"
+  ],
+  "scripts": {
+    "install-all": "npm install && cd example && npm install",
+    "build": "webpack",
+    "link": "npm link & npm link example/node_modules/react && cd example && npm link react-file-trap",
+    "start": "cd example && npm start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
