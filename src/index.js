@@ -100,7 +100,7 @@ const FileTrap = React.forwardRef((props, ref) => {
 
     return (
         <div
-            onClick={browseFiles}
+            onClick={browseOnClick ? browseFiles : null}
             onDragEnter={_handleDrag}
             onDragLeave={_handleDrag}
             onDragOver={_handleDrag}

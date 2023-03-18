@@ -44,13 +44,18 @@ function App() {
     <div className="App">
       <FileTrap
         ref={wrapperRef}
+        handleDrag={handleDrag}
+        handleDrop={handleDrop}
+        onValidationError={onValidationError}
         handleChange={handleChange}
+        browseOnClick={false}
       >
         <div style={{ margin: 10, border: "2px solid red" }}>
           <h2 style={{ margin: 5 }}>Current Event: {currentEvent}</h2>
           <h2 style={{ margin: 5 }}>Valid File Count: {validFiles.length}</h2>
           <h2 style={{ margin: 5 }}>Invalid File Count: {invalidFiles.length}</h2>
           <h2 style={{ margin: 5 }}>Last Error: {lastError}</h2>
+          <button style={{ margin: 5 }} onClick={browseFiles}>Trigger Browse Outside of Wrapper</button>
         </div>
       </FileTrap>
 
