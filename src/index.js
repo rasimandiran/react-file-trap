@@ -19,7 +19,8 @@ const FileTrap = React.forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         browseFiles: () => { browseFiles(null, true); },
-        resetWrapper: () => { setFileList([]); }
+        resetWrapper: () => { setFileList([]); },
+        removeFile: (file) => { setFileList(fileList.filter(f => f !== file)); }
     }));
 
     // triggers when fileList changes

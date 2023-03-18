@@ -40,12 +40,17 @@ function App() {
     setLastError(null);
   };
 
+  const deleteFile = (file) => {
+    wrapperRef.current.removeFile(file);
+  };
+
   return (
     <div className="App">
       <FileTrap
         ref={wrapperRef}
         handleDrag={handleDrag}
         handleDrop={handleDrop}
+        fileCount={10}
         onValidationError={onValidationError}
         handleChange={handleChange}
         browseOnClick={false}
@@ -69,7 +74,7 @@ function App() {
         <h2 style={{ margin: 5 }}>Valid Files</h2>
         <hr></hr>
         <ul>
-          {validFiles.map((file, index) => <li key={index}>{file.name}</li>)}
+          {validFiles.map((file, index) => <li key={index}>{file.name} <button style={{ margin: 1 }} onClick={() => deleteFile(file)}>Delete</button></li>)}
         </ul>
         <h2 style={{ margin: 5 }}>Invalid Files</h2>
         <hr></hr>
