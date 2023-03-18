@@ -44,15 +44,7 @@ function App() {
     <div className="App">
       <FileTrap
         ref={wrapperRef}
-        allowedExtensions={['jpg', 'png']}
         handleChange={handleChange}
-        handleDrag={handleDrag}
-        handleDrop={handleDrop}
-        onValidationError={onValidationError}
-        fileCount={3}
-        maxFileSize={2} // MB
-        minFileSize={0.1} // MB
-        browseOnClick={false}
       >
         <div style={{ margin: 10, border: "2px solid red" }}>
           <h2 style={{ margin: 5 }}>Current Event: {currentEvent}</h2>

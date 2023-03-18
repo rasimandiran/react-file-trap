@@ -2,15 +2,15 @@ import React, { useRef, useState, useEffect, useImperativeHandle } from 'react';
 
 const FileTrap = React.forwardRef((props, ref) => {
     let {
-        allowedExtensions,
+        allowedExtensions = undefined,
+        handleDrag = undefined,
+        handleDrop = undefined,
+        onValidationError = undefined,
+        fileCount = Number.MAX_VALUE,
+        maxFileSize = Number.MAX_VALUE,
+        minFileSize = 0,
+        browseOnClick = true,
         handleChange,
-        handleDrag,
-        handleDrop,
-        onValidationError,
-        fileCount,
-        maxFileSize,
-        minFileSize,
-        browseOnClick,
         children
     } = props;
 
@@ -112,7 +112,7 @@ const FileTrap = React.forwardRef((props, ref) => {
                 style={{ display: 'none' }}
                 onChange={_handleInputChange}
                 multiple={(fileCount - fileList.length) > 1}
-                accept={allowedExtensions.map(ext => "." + ext.toLowerCase()).join(",")}
+                accept={allowedExtensions ? allowedExtensions.map(ext => "." + ext.toLowerCase()).join(",") : null}
             />
             {children}
         </div>

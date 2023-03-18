@@ -1,6 +1,6 @@
 {
   "name": "react-file-trap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Simple wrapper component that convert child component to a drag and drop file input",
   "author": "Rasim Andiran <rasimandiran@gmail.com>",
